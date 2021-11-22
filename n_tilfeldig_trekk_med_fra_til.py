@@ -42,8 +42,11 @@ def skriv_til_fil():
     fil_nr_1.close()
     
 
-skriv_til_fil()
+def skriv_til_fil_2():
+    # Skriver til en fil til, men med et mer standard format...
+    with open('myfile2.txt', 'w') as filehandle:
+        json.dump(p, filehandle)
 
-# Skriver til en fil til, men med et mer standard format...
-with open('myfile2.txt', 'w') as filehandle:
-    json.dump(p, filehandle)
+
+skriv_til_fil()
+skriv_til_fil_2()
